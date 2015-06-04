@@ -1,4 +1,4 @@
-# demographic_simulator
+# Selection-Dominance-Demography_simulator
 This simulator models population genetics in sexual organisms in a non-equilibrium demography with arbitrary selection strength and dominance coefficients.  The simulator models an initial population that splits at some time into two sub-populations, one of which experiences a population bottleneck, and the other does not.  For representative puurposes we will refer to the bottleneckeded population as "European", and the non-bottlenecked population as "African", as the simulation is particularly useful for modeling the expected genetic differences between Africans and Europeans due to the Out of Africa event.  More generally, the simplest model of a square bottleneck is useful for the exploration of parameter space to understand the transient response of alleles under both selection and dominance to a non-equilibrium event such as a bottleneck.
 
 Three basic demographies are modeled:  
