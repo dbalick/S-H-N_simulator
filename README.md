@@ -1,11 +1,14 @@
 # Selection-Dominance-Demography_simulator
-This simulator models population genetics in sexual organisms in a non-equilibrium demography with arbitrary selection strength and dominance coefficients.  The simulator models an initial population that splits at some time into two sub-populations, one of which experiences a population bottleneck, and the other does not.  For representative puurposes we will refer to the bottleneckeded population as "European", and the non-bottlenecked population as "African", as the simulation is particularly useful for modeling the expected genetic differences between Africans and Europeans due to the Out of Africa event.  More generally, the simplest model of a square bottleneck is useful for the exploration of parameter space to understand the transient response of alleles under both selection and dominance to a non-equilibrium event such as a bottleneck.
+This simulator models population genetics in sexual organisms in a non-equilibrium demography with arbitrary selection strength and dominance coefficients.  After initial equilibration, an initial population splits into two sub-populations, one of which experiences a population bottleneck, and the other does not.  For representative puurposes we will refer to the bottleneckeded population as "European", and the non-bottlenecked population as "African", as the simulation is particularly useful for modeling the expected genetic differences between Africans and Europeans due to the Out of Africa event.  More generally, the simplest model of a square bottleneck is useful for the exploration of parameter space to understand the transient response of alleles under both selection and dominance to a non-equilibrium event such as a bottleneck.
 
-Three basic demographies are modeled:  
+Three basic demographies are incorporated:  
 
-1) A simple square bottleneck followed by subsequent re-expansion to the original equilibrium population size.
-2) The Gravel, et al. (PNAS 2011) model of African and European demography as inferred from the 1000 Genomes Project (1KG) data.
-3) The Tennessen, et al. (Science 2012) model of African and European demography as inferred from Exome Sequencing Project (ESP) data.
+1) A simple square bottleneck in Europeans followed by subsequent re-expansion to the original equilibrium population size.  Africans rempain in equilibrium throughout.
+
+2) The Gravel, et al. (PNAS 2011) model of African and European demographic history as inferred from the 1000 Genomes Project (1KG) data.
+
+3) The Tennessen, et al. (Science 2012) model of African and European demogrphic history as inferred from Exome Sequencing Project (ESP) data.
+
 
 For computational speed, the simulator only keeps track of allele frequencies in a freely recombining diploid system, rather than containing full genome information.  We use an infinite sites model with a mutation rate of 2e-08 per generation per site.   Allele counts in the current generation are sampled based on the frequencies in the previous generation x_{old}, the selection coefficient s, and the dominance coefficient h.  We calculate the expected frequency x_{current} in the current generation as: 
 
